@@ -17,3 +17,4 @@ class Job(models.Model):
     
     class Meta:
         ordering = ('name',)
+        db_table = 'cron_job'
