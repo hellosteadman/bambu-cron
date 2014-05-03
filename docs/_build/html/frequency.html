@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Frequency &mdash; Bambu Cron 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Bambu Cron 2.0 documentation" href="index.html" />
+    <link rel="prev" title="Models" href="models.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="models.html" title="Models"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Bambu Cron 2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-bambu_cron.frequency">
+<span id="frequency"></span><h1>Frequency<a class="headerlink" href="#module-bambu_cron.frequency" title="Permalink to this headline">¶</a></h1>
+<p>Defines the frequencies with which a cron job can run</p>
+<dl class="data">
+<dt id="bambu_cron.frequency.DAY">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">DAY</tt><em class="property"> = 1440</em><a class="headerlink" href="#bambu_cron.frequency.DAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every 24 hours</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.frequency.HOUR">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">HOUR</tt><em class="property"> = 60</em><a class="headerlink" href="#bambu_cron.frequency.HOUR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every 60 minutes</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.frequency.MINUTE">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">MINUTE</tt><em class="property"> = 1</em><a class="headerlink" href="#bambu_cron.frequency.MINUTE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every 60 seconds</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.frequency.MONTH">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">MONTH</tt><em class="property"> = -1</em><a class="headerlink" href="#bambu_cron.frequency.MONTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every month (largely untested)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.frequency.WEEK">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">WEEK</tt><em class="property"> = 10080</em><a class="headerlink" href="#bambu_cron.frequency.WEEK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every 7 days</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.frequency.YEAR">
+<tt class="descclassname">bambu_cron.frequency.</tt><tt class="descname">YEAR</tt><em class="property"> = 525600</em><a class="headerlink" href="#bambu_cron.frequency.YEAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a job every 365 days</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-bambu_cron.weekdays">
+<span id="weekdays"></span><h1>Weekdays<a class="headerlink" href="#module-bambu_cron.weekdays" title="Permalink to this headline">¶</a></h1>
+<p>Defines days of the week as numbers</p>
+<dl class="data">
+<dt id="bambu_cron.weekdays.FRIDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">FRIDAY</tt><em class="property"> = 4</em><a class="headerlink" href="#bambu_cron.weekdays.FRIDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Friday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.MONDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">MONDAY</tt><em class="property"> = 0</em><a class="headerlink" href="#bambu_cron.weekdays.MONDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.SATURDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">SATURDAY</tt><em class="property"> = 5</em><a class="headerlink" href="#bambu_cron.weekdays.SATURDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saturday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.SUNDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">SUNDAY</tt><em class="property"> = 6</em><a class="headerlink" href="#bambu_cron.weekdays.SUNDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sunday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.THURSDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">THURSDAY</tt><em class="property"> = 3</em><a class="headerlink" href="#bambu_cron.weekdays.THURSDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thursday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.TUESDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">TUESDAY</tt><em class="property"> = 1</em><a class="headerlink" href="#bambu_cron.weekdays.TUESDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuesday</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="bambu_cron.weekdays.WEDNESDAY">
+<tt class="descclassname">bambu_cron.weekdays.</tt><tt class="descname">WEDNESDAY</tt><em class="property"> = 2</em><a class="headerlink" href="#bambu_cron.weekdays.WEDNESDAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wednesday</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Frequency</a></li>
+<li><a class="reference internal" href="#module-bambu_cron.weekdays">Weekdays</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="models.html"
+                        title="previous chapter">Models</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/frequency.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="models.html" title="Models"
+             >previous</a> |</li>
+        <li><a href="index.html">Bambu Cron 2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Steadman.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Defining a job &mdash; Bambu Cron 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Bambu Cron 2.0 documentation" href="index.html" />
+    <link rel="next" title="Management comment" href="management.html" />
+    <link rel="prev" title="Bambu Cron" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="management.html" title="Management comment"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bambu Cron"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Bambu Cron 2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="defining-a-job">
+<h1>Defining a job<a class="headerlink" href="#defining-a-job" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bambu_cron.options.CronJob">
+<em class="property">class </em><tt class="descclassname">bambu_cron.options.</tt><tt class="descname">CronJob</tt><a class="headerlink" href="#bambu_cron.options.CronJob" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="bambu_cron.options.CronJob.day">
+<tt class="descname">day</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.day" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which day of the month to run the job on</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.frequency">
+<tt class="descname">frequency</tt><em class="property"> = 1440</em><a class="headerlink" href="#bambu_cron.options.CronJob.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>The frequency of the job</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.hour">
+<tt class="descname">hour</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.hour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which hour of the day to run the job on</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.interval">
+<tt class="descname">interval</tt><em class="property"> = 1</em><a class="headerlink" href="#bambu_cron.options.CronJob.interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interval at which the job shoudl be run. For example, a frequency set to <tt class="docutils literal"><span class="pre">DAY</span></tt> and interval of 2 would mean the job would run every two days</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.minute">
+<tt class="descname">minute</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.minute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which minute of the hour to run the job on</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.month">
+<tt class="descname">month</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.month" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which month to run the job on</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bambu_cron.options.CronJob.run">
+<tt class="descname">run</tt><big>(</big><em>logger</em><big>)</big><a class="headerlink" href="#bambu_cron.options.CronJob.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the job. This is the method to override to actually do the work of the cron job.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>logger</strong> &#8211; An instance of a logger that can be used to log progress, information, warnings or errors about the job</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.second">
+<tt class="descname">second</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.second" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which second of the minute to run the job on (not reliable)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.transactional">
+<tt class="descname">transactional</tt><em class="property"> = True</em><a class="headerlink" href="#bambu_cron.options.CronJob.transactional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this job should run inside a database transaction</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bambu_cron.options.CronJob.weekday">
+<tt class="descname">weekday</tt><em class="property"> = None</em><a class="headerlink" href="#bambu_cron.options.CronJob.weekday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which weekday to run the job on</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Bambu Cron</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="management.html"
+                        title="next chapter">Management comment</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/options.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="management.html" title="Management comment"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Bambu Cron"
+             >previous</a> |</li>
+        <li><a href="index.html">Bambu Cron 2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Steadman.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

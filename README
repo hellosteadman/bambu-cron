@@ -1,0 +1,83 @@
+Bambu Cron
+==========
+
+A simple scheduling system that lets you define jobs that get performed
+at various intervals
+
+About Bambu Cron
+----------------
+
+Bambu Cron makes it easy to define scheduled tasks that can run as
+rarely as once a year os often as once a minute. The syadmin only needs
+to add an extra line to the crontab file belonging to the user with
+permission to perform actions on the site, and and Bambu Cron will do
+the rest.
+
+Jobs are defined very simply, and a flag is set to alert the system that
+a job is running, so that frequent jobs that take longer than a minute
+to run, don't run in parallel.
+
+About Bambu Tools 2.0
+---------------------
+
+This is part of a toolset called Bambu Tools. It's being moved from a
+namespace of ``bambu`` to its own 'root-level' package, along with all
+the other tools in the set. If you're upgrading from a version prior to
+2.0, please make sure to update your code to use ``bambu_cron`` rather
+than ``bambu_cron``.
+
+Installation
+------------
+
+Install the package via Pip:
+
+::
+
+    pip install bambu-cron
+
+Add it to your ``INSTALLED_APPS`` list:
+
+::
+
+    INSTALLED_APPS = (
+        ...
+        'bambu_cron'
+    )
+
+Run ``manage.py syncdb`` or ``manage.py migrate`` to setup the database
+tables.
+
+Basic usage
+-----------
+
+You define cron jobs and register them in a file called cron.py, which
+you add to your Django app. Only cron.py files found within an app
+referenced in the ``INSTALLED_APPS`` setting will be discovered.
+
+::
+
+    import bambu_cron
+
+    class EmailDigestJob(bambu_cron.CronJob):
+        frequency = bambu_cron.frequency.DAY
+
+        def run(self, logger):
+            # Send a digest email on a daily basis
+            ...
+
+    bambu_cron.site.register(EmailDigestJob)
+
+This registers the ``EmailDigestJob`` job. Once registered, you'll need
+to call ``python manage.py cron --setup`` to allow Bambu Cron to store
+details of the job in the database.
+
+Documentation
+-------------
+
+Full documentation can be found at
+`ReadTheDocs <http://bambu-cron.readthedocs.org/>`_.
+
+Questions or suggestions?
+-------------------------
+
+Find me on Twitter (@iamsteadman) or `visit my blog <http://steadman.io/>`_.
