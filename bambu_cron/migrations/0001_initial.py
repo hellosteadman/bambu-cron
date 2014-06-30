@@ -7,7 +7,7 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
+
         # Adding model 'Job'
         db.create_table('cron_job', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
@@ -19,7 +19,7 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        
+
         # Deleting model 'Job'
         db.delete_table('cron_job')
 
@@ -34,4 +34,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['cron']
+    complete_apps = ['bambu_cron']
