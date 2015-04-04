@@ -4,7 +4,7 @@ from os import path
 
 setup(
     name = 'bambu-cron',
-    version = '2.0',
+    version = '3.0',
     description = 'A simple scheduling system that lets you define jobs that get performed at various intervals. Use a virtual "poor man\'s cron" or a single Django management command to run the jobs.',
     author = 'Steadman',
     author_email = 'mark@steadman.io',
