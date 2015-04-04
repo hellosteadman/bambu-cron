@@ -24,7 +24,7 @@ class CronSite(object):
     def setup(self):
         from bambu_cron.models import Job
         
-        with transaction.commit_on_success():
+        with transaction.atomic():
             for handler in self._registry.values():
                 next = handler.next_run_date()
                 if not Job.objects.filter(name = handler).exists():
@@ -56,7 +56,7 @@ class CronSite(object):
         if not force:
             kwargs['next_run__lte'] = now()
         
-        with transaction.commit_on_success():
+        with transaction.atomic():
             for job in Job.objects.filter(running = False, **kwargs).select_for_update():
                 handler = self._registry.get(job.name)
                 if handler is None:
@@ -68,7 +68,7 @@ class CronSite(object):
                 
                 try:
                     if handler.transactional:
-                        with transaction.commit_on_success():
+                        with transaction.atomic():
                             handler.run(self.logger)
                     else:
                         handler.run(self.logger)
